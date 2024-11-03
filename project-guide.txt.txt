@@ -1,0 +1,43 @@
+########## Project Guide #########
+    Author: Ashish Kumar
+    Mobile: 9102969481
+    Publish Date: 03-11-2024
+
+######### About Project #########
+    React E-commerce Shopping Application (cash on Delivery)
+    Technologies
+        Frontend
+            1.HTML
+            2.CSS
+            3.Bootstrap5
+            4.React(JSX)
+        Backend
+            1.JSON-SERVER(mock-api)
+            2.
+
+######## How to Setup and Run The  ######
+    Downlode Project Source Code:https://github.com/ashish-code6/live-project/archive/refs/heads/main.zip
+    Downlode Api Source Code:https://github.com/ashish-code6/live-project-api/archive/refs/heads/main.zip
+
+Note : steps to setup the Project
+    1. Download Source code from above url
+    2. unzip/ extract both folder
+    3. install node js 18+ version in your system
+    4. install react devlopment enviroment using below command
+        npm install -g create-react-app
+    5. install JSON-SERVER to run api
+        npm install -g json-server
+    6. start the json-server using below command 
+        a.open cmd in api folder (that u have extracted) and run
+        
+            json-server --watch data.json --port 1234
+        
+    7. start react devlopment server
+        a. open cmd in react project folder that is "project1" and run this command
+            npm start
+
+        Note: You can browser https://localhost:3000
+        Thanks For Your to see My Project.
+        Ashish(9102969481)
+        Gmail:ashishk810222@gmail.com
+    
