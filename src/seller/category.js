@@ -6,25 +6,28 @@ const Category = () => {
   const [getCatList, setGetCatList] = useState([]);
 
   const save = () => {
-    let newCategory = { catlist: categoryList };
-    let url = "http://localhost:3000/categoryapi/";
+    if(categoryList.length!==0){
+    let newCategory = { catName: categoryList };
+    let url = "http://localhost:1234/categoryapi/";
     let postData = {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify(newCategory),
     };
-
     fetch(url, postData)
       .then((response) => response.json())
       .then((data) => {
-        setMessage(`${data.catlist} saved successfully`);
+        setMessage(`${data.catName} saved successfully`);
         setCategoryList("");
         getCategory(); // Refresh the list after saving
       });
-  };
+  }else{
+    setMessage("Please Add category ")
+  }
+}
 
   const getCategory = () => {
-    let url = "http://localhost:3000/categoryapi/";
+    let url = "http://localhost:1234/categoryapi/";
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -33,13 +36,13 @@ const Category = () => {
   };
 
   const deleteCategory = (id) => {
-    let url = `http://localhost:3000/categoryapi/${id}`;
+    let url = `http://localhost:1234/categoryapi/${id}`;
     let postData = { method: "DELETE" };
 
     fetch(url, postData)
       .then((response) => response.json())
       .then((data) => {
-        setMessage(`${data.catlist} deleted successfully`);
+        setMessage(`${data.catName} deleted successfully`);
         getCategory(); // Refresh the list after deletion
       });
   };
@@ -89,13 +92,13 @@ const Category = () => {
                   {getCatList.map((category, index) => (
                     <tr key={index}>
                       <td>{category.id}</td>
-                      <td>{category.catlist}</td>
+                      <td>{category.catName}</td>
                       <td>
                         <button
                           onClick={() => deleteCategory(category.id)}
                           className="btn btn-danger"
                         >
-                          <i className="fas fa-trash-alt"></i> Delete
+                          <i className="fa fa-trash sm"></i>
                         </button>
                       </td>
                     </tr>

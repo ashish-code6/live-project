@@ -37,7 +37,7 @@ Note : steps to setup the Project
             npm start
 
         Note: You can browser https://localhost:3000
-        Thanks For Your to see My Project.
+        Thanks For Your time to see My Project.
         Ashish(9102969481)
         Gmail:ashishk810222@gmail.com
     
